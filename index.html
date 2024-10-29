@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restoran</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.schools.com/css/4/.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" href="style.css">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url("az-dolmasi.jpg") center / cover;
+  min-height: 90%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="-top -hide-small">
+  <div class="-bar -xlarge -black -opacity -hover-opacity-off" id="myNavbar">
+    <a href="#" class="-bar-item -button">ANA SƏHİFƏ</a>
+    <a href="#menu" class="-bar-item -button">MENYU</a>
+    <a href="#about" class="-bar-item -button">HAQQİNDA</a>
+    <a href="#myMap" class="-bar-item -button">ƏLAQƏ</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg -display-container -grayscale-min" id="home">
+  <div class="-display-bottomleft -padding">
+    <span class="-tag -xlarge">Səhər 10-dan axşam 12-dək açıqdır</span>
+  </div>
+  <div class="-display-middle -center">
+    <span class="-text-white -hide-small" style="font-size:100px">AZƏRBAYCAN<br>MƏTBƏXİ</span>
+    <span class="-text-white -hide-large -hide-medium" style="font-size:60px"><b>AZƏRBAYCAN<br>MƏTBƏXİ</b></span>
+    <p><a href="#menu" class="-button -xxlarge -black">Menyuya daxil ol</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="-container -black -padding-64 -xxlarge" id="menu">
+  <div class="-content">
+  
+    <h1 class="-center -jumbo" style="margin-bottom:64px">MENYU</h1>
+    <div class="-row -center -border -border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="-col s4 tablink -padding-large -hover-red">İsti yeməklər</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="-col s4 tablink -padding-large -hover-red">Salatlar</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="-col s4 tablink -padding-large -hover-red">İçkilər</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="-container menu -padding-32 -white">
+      <h1><b>Yarpaq dolmasi</b> <span class="-right -tag -dark-grey -round">10.00 azn</span></h1>
+      <p class="-text-grey">Üzüm yarpağı, qoyun əti, quyruq, nanə, keşniş, şüyüd, kərə yağı, yumru düyü</p>
+      <hr>
+   
+      <h1><b>Cız-bız</b> <span class="-right -tag -dark-grey -round">12.00 azn</span></h1>
+      <p class="-text-grey">Qoyun içalatı, kartof, soğan</p>
+      <hr>
+      
+      <h1><b>Üç bacı dolması</b> <span class="-right -tag -dark-grey -round">10.00 azn</span></h1>
+      <p class="-text-grey">Pomidor, badımcan, bibər, qoyun əti, quyruq, kərə yağı</p>
+      <hr>
+
+      <h1><b>Kələm dolmasə</b> <span class="-right -tag -dark-grey -round">10.00 azn</span></h1>
+      <p class="-text-grey">Kələm, qoyun əti, quyruq, düyü, soğan, kərə yağı</p>
+      <hr>
+
+      <h1><b>Quzu ətindən sac</b> <span class="-tag -red -round">İsti!</span><span class="-right -tag -dark-grey -round">28.00 azn</span></h1>
+      <p class="-text-grey">Quzu əti, göbələk, bibər, pomidor, kartof, badimcan</p>
+      <hr>
+
+      <h1><b>Can ətindən zoğal qovurma</b> <span class="-tag -grey -round">Yeni</span><span class="-right -tag -dark-grey -round">17.00 azn</span></h1>
+      <p class="-text-grey">Can əti, soğan, zoğal, zoğal axtası</p>
+    </div>
+
+    <div id="Pasta" class="-container menu -padding-32 -white">
+      <h1><b>Manqal salatı</b> <span class="-tag -grey -round">Popular</span> <span class="-right -tag -dark-grey -round">7.00 azn</span></h1>
+      <p class="-text-grey">Badımcan, pomidor, acı bibər, bitki yağı, sarımsaq</p>
+      <hr>
+   
+      <h1><b>Mimoza salatı</b> <span class="-right -tag -dark-grey -round">7.00 azn</span></h1>
+      <p class="-text-grey">Kartof, kök, toyuq file, mayonez, yumurta, holland pendiri</p>
+      <hr>
+      
+      <h1><b>Çoban salatı</b> <span class="-right -tag -dark-grey -round">6.00 azn</span></h1>
+      <p class="-text-grey">Xiyar, pomidor, reyhan, cəfəri, zeytun yağı, duz</p>
+      <hr>
+
+      <h1><b>Xırt-xırt badımcan salatı</b> <span class="-right -tag -dark-grey -round">12.00 azn</span></h1>
+      <p class="-text-grey">Badimcan, pomidor, sirkə, küncüt, narşərab</p>
+    </div>
+
+
+    <div id="Starter" class="-container menu -padding-32 -white">
+      <h1><b>Coca Cola</b> <span class="-tag -grey -round"></span><span class="-right -tag -dark-grey -round">5.00 azn</span></h1>
+      <p class="-text-grey"></p>
+      <hr>
+   
+      <h1><b>Ayran</b> <span class="-right -tag -dark-grey -round">2.50 azn</span></h1>
+      <p class="-text-grey"></p>
+      <hr>
+      
+      <h1><b>Kompot</b> <span class="-right -tag -dark-grey -round">6.00 azn</span></h1>
+      <p class="-text-grey"></p>
+      <hr>
+      
+      <h1><b>Sirab</b> <span class="-right -tag -dark-grey -round">3.00 azn</span></h1>
+      <p class="-text-grey">qazlı/qazsız</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="-container -padding-64 -red -grayscale -xlarge" id="about">
+  <div class="-content">
+    <h1 class="-center -jumbo" style="margin-bottom:64px">Haqqında</h1>
+    <p>Aşpaz, İlkin Əkbərzadə tərəfindən dostları ilə oturmaq üçün vaxt tapacağı və vaxt, İş və uzun ayrılıqdan asılı olaraq yüksək səviyyəli yeməklər hazırlayacağı ümidi ilə quruldu. İşə vaxt itirməmək və yemək hazırlamaq üçün minimum xərclərə çalışırıq.</p>
+    <p><strong>Aşpaz?</strong> İlkin Əkbərzadə<img src="chef.jpg" style="width:150px" class="-circle -right" alt="Chef"></p>
+    <p>İnteryerimizlə fəxr edirik.</p>
+    <img src="onepage_restaurant.jpg" style="width:100%" class="-margin-top -margin-bottom" alt="Restaurant">
+    <h1><b>İş saatları</b></h1>
+    
+    <div class="-row">
+      <div class="-col s6">
+        <p>Bazar ertəsi və çərşənbə axşamı BAĞLIDIR</p>
+        <p>Çərşənbə 10:00 - 00:00</p>
+        <p>Cümə axşamı 10:00 - 00: 00</p>
+      </div>
+      <div class="-col s6">
+        <p>Cümə, 10:00-12: 00</p>
+        <p>Şənbə 10:00-23: 00</p>
+        <p>Bazar günü BAĞLIDIR</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="map.jpg" class="-image -greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="-container -padding-64 -blue-grey -grayscale-min -xlarge">
+  <div class="-content">
+    <h1 class="-center -jumbo" style="margin-bottom:64px">Əlaqə</h1>
+    <p>Bizi bir ünvanda tapın və ya +994 51 452 94 18 nömrəsinə zəng edin</p>
+    <p><span class="-tag"> Məlumat!</span> Böyük və ya kiçik hər hansı bir hadisə üçün tam yemək xidmətləri təklif edirik. Ehtiyaclarınızı başa düşürük və yeməkləri ən vacib meyarlara - həm görünüşünə, həm də dadına görə hazırlayacağıq.
+
+     </p>
+    <p class="-xxlarge"><strong> Rezervasiya edin</strong> bu gün üçün xüsusi yemək sifariş edin və ya sadəcə bizə mesaj göndərin: </p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="-input -padding-16 -border" type="text" placeholder="Ad" required name="Name"></p>
+      <p><input class="-input -padding-16 -border" type="number" placeholder="Neçə nəfər?" required name="People"></p>
+      <p><input class="-input -padding-16 -border" type="datetime-local" placeholder="Tarix və vaxt" required name="date" value="2024-11-16T20:00"></p>
+      <p><input class="-input -padding-16 -border" type="text" placeholder="Mesaj \ xüsusi tələblər" required name="Message"></p>
+      <p><button class="-button -light-grey -block" type="submit">Mesajı göndər</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="-center -black -padding-48 -xxlarge">
+  <p>Design by Fatima &copy 2024 <a href="https://www.schools.com/css/default.asp" title=".CSS" target="_blank" class="-hover-text-green"></a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" -red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " -red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
